@@ -19,7 +19,21 @@ everything on the GPU; the result then stays on that device.
 ## Installation
 
 ```bash
-pip install .
+pip install ElastixTorch
+```
+
+For the GPU, install a CUDA build of PyTorch first (see
+https://pytorch.org/get-started/locally/).
+
+From the sources:
+
+```bash
+pip install git+https://github.com/GhilesReguig/ElastixTorch
+# or, to modify the code and run the tests:
+git clone https://github.com/GhilesReguig/ElastixTorch
+cd ElastixTorch
+pip install -e ".[test]"
+pytest
 ```
 
 ## How it maps to Elastix
