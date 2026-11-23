@@ -150,4 +150,4 @@ Neuroinformatics, vol. 7, no. 50, pp. 1-15, January 2014, https://doi.org/10.338
 
 ## License
 
-MIT, see [LICENSE](LICENSE).
+MIT, see [LICENSE](https://github.com/GhilesReguig/ElastixTorch/blob/main/LICENSE).

@@ -1,21 +1,41 @@
 [build-system]
-requires = ["setuptools>=61"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "ElastixTorch"
-version = "0.1.0"
+dynamic = ["version"]
 description = "Elastix-style 3D image registration (multi-resolution, Mattes MI, adaptive stochastic gradient descent) in native PyTorch"
 readme = "README.md"
-license = { file = "LICENSE" }
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Ghiles Reguig" }]
 requires-python = ">=3.9"
 dependencies = ["torch>=2.0"]
+keywords = ["image registration", "elastix", "pytorch", "mutual information", "medical imaging", "MRI", "GPU"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Scientific/Engineering :: Image Processing",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+
+[project.urls]
+Homepage = "https://github.com/GhilesReguig/ElastixTorch"
+Source = "https://github.com/GhilesReguig/ElastixTorch"
+Issues = "https://github.com/GhilesReguig/ElastixTorch/issues"
 
 [project.optional-dependencies]
 test = ["pytest"]
 
 [tool.setuptools]
 packages = ["elastixtorch"]
+
+[tool.setuptools.dynamic]
+version = { attr = "elastixtorch.__version__" }
 
 [tool.pytest.ini_options]
 pythonpath = [".", "tests"]
